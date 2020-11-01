@@ -1,14 +1,15 @@
 {
   "name": "react-app-template",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React Application Template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-watch": "echo \"Error: no test specified\" && exit 1",
-    "local-server": "webpack-dev-server --inline",
-    "devbuild-watch": "webpack --mode development",
-    "build-watch": "webpack --mode production"
+    "local-server": "webpack serve --mode development --config webpack.config.js",
+    "devbuild": "webpack --mode development",
+    "devbuild-watch": "webpack --watch --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -26,18 +27,18 @@
     "@babel/preset-env": "7.12.1",
     "@babel/preset-react": "7.12.1",
     "@babel/register": "7.12.1",
-    "file-loader": "6.1.1",
+    "babel-loader": "8.1.0",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "5.0.0",
+    "html-webpack-plugin": "4.5.0",
     "raw-loader": "4.0.2",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.11.0"
+    "style-loader": "2.0.0",
+    "webpack": "5.3.2",
+    "webpack-cli": "4.1.0",
+    "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
-    "babel-loader": "8.1.0",
-    "css-loader": "3.6.0",
-    "html-webpack-plugin": "^3.2.0",
-    "react": "17.0.0",
-    "react-dom": "17.0.0",
-    "style-loader": "^1.0.1"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }
