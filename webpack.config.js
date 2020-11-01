@@ -1,6 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
 require('@babel/register');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 //Webpack config
 const config = {
@@ -38,23 +40,25 @@ const config = {
     ]
   },
 
-  //TODO - Need to move to dev configs only 
+  //TODO - Need move dev configs to own file 
   performance: {
     hints: false,
   },
 
-  //TODO - Need to move to dev configs only
   plugins: [
-    new webpack.HotModuleReplacementPlugin({}),
-  ],
+    //HMR
+    new webpack.HotModuleReplacementPlugin(),
+    
+    //Remove all unused webpack files after a build
+    new CleanWebpackPlugin(),
 
-  /*
-  //TODO - Need to implement '-watch' commands instead
-  watch: true,
-  watchOptions: {
-    ignored: ['./node_modules', './dist', './.git'],
-  },
-  */
+    //Create output HTML page with scripts tags based on template
+    new HtmlWebpackPlugin({
+      title: 'React App Template',
+      template: './src/template.html',
+      filename: 'index.html',
+    }),
+  ],
 
   devtool: 'source-map',
 
@@ -63,6 +67,9 @@ const config = {
     compress: true,
     hot: true,
     port: 12345,
+    watchOptions: {
+      ignored: ['./node_modules', './dist', './.git'],
+    },
   },
 };
 
