@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+/**
+ * Root level React component. Hosts the application.
+ */
 class App extends Component{
   constructor(){
     super();
@@ -9,7 +12,7 @@ class App extends Component{
     return (
       <React.Fragment>
        <h1>Application</h1>
-       <p>Text</p>
+       <p>This is some sample text!</p>
       </React.Fragment>
     );
   }
