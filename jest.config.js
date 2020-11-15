@@ -16,6 +16,8 @@ module.exports = {
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
     "\\\\node_modules\\\\",
+
+    //Ignore index.js because it cannot be reasonably tested, nor is there much value to doing so
     "index.js"
   ],
 
@@ -90,7 +92,7 @@ module.exports = {
   // testURL: "http://localhost",
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
-   timers: "modern",
+  timers: "modern",
 
   // Indicates whether each individual test should be reported during the run
   verbose: true,

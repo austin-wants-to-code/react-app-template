@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 /**
- * Root level React component. Hosts the application.
+ * The top-level React component which hosts the entire React application.
  */
 class App extends Component{
   constructor(){
