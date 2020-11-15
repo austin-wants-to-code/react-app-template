@@ -10,6 +10,10 @@ Entry point is the App.js component.
 
 Commands:
 
+- npm run test
+    - Runs any tests found within the "tests" folder. After the tests have been executed, a code-coverage report will be created in the "coverage" folder.
+- npm run test-watch
+    - Runs tests as described for the "test" command, however, tests will be reran if any changes to the code have been made. Only tests reliant on the updated code will be reran. 
 - npm run local-server
     - Runs the application locally via Webpack Dev Server. Hot reload is active.
 - npm run devbuild
