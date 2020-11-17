@@ -56,6 +56,11 @@ module.exports = {
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
   
+  setupFilesAfterEnv: [
+    './tests/testFiles/setup/testEnv.setup.js',
+    './tests/testFiles/setup/commonHooks.setup.js',
+  ],
+
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 

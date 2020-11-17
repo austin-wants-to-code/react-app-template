@@ -1,7 +1,6 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import App from '../../src/components/App';
-import '../testUtilities/baseTestFunctions';
 import { render } from '@testing-library/react';
 
 describe('<App>', () => {
