@@ -1,11 +1,8 @@
 /**
- * Fundamental hooks/functions needed for tests to work with test libraries
+ * Common hooks for all tests
  */
 
 import { cleanup } from '@testing-library/react';
-
-beforeEach(() => {
-});
 
 afterEach(() => {
   //Clean DOM of React components
