@@ -1,3 +1,12 @@
+# 0.0.5 [2020-11-16]
+
+## Added
+  - The test-library/jest-dom library which provides matchers for common DOM assertions
+  - Basic test-setup files for new library and any other necessary setup
+
+## Changed
+  - Moved shared test hooks from test-util file to setup file (removes unwanted import from tests)
+
 # 0.0.4 [2020-11-14]
 
 ## Added
