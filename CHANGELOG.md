@@ -7,6 +7,10 @@
 
 ## Changed
   - Moved shared test hooks from test-util file to setup file (removes unwanted import from tests)
+  - Dependencies updated to latest
+
+## Fixed
+  - Issue where devbuild-watch deletes the output HTML every other build (needed to disable HtmlWebpackPlugin cache)
 
 # 0.0.4 [2020-11-14]
 
