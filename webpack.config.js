@@ -57,6 +57,7 @@ const config = {
       title: 'React App Template',
       template: './src/template.html',
       filename: 'index.html',
+      cache: false, //Rebuild every time
     }),
   ],
 
